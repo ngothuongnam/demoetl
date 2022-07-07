@@ -10,10 +10,10 @@ public class JDBCUtil {
     public static Connection getConnection(String url, String user, String password) throws SQLException {
         Connection c = null;
         try {
-            //Tạo và đăng ký JDBC Driver với Driver Manager
+            //create and register JDBC Driver with Driver Manager
             Driver driver = new Driver();
             DriverManager.registerDriver(driver);
-            //Tạo connection
+            //create connection
             c = DriverManager.getConnection(url, user, password);
         } catch (SQLException e) {
             e.printStackTrace();
